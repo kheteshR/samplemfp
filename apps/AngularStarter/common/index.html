@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html ng-app="AngularStarterApp">
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>index</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    		<link rel="shortcut icon" href="images/favicon.png">
+    		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    		<link href="css/bootstrap.css" rel="stylesheet">
+    		<script src="js/lib/angular.js"></script>
+    		<script src="js/lib/angular-sanitize.js"></script>
+    	</head>
+    	<body style="display: none;" ng-controller="ApplicationController as AppCtrl">
+   			
+   			<feeds-page 	ng-show="AppCtrl.shouldDisplay(1)"></feeds-page>
+   			
+   			<details-page 	ng-show="AppCtrl.shouldDisplay(2)"></details-page>
+   			
+   			<login-page 	ng-show="AppCtrl.shouldDisplay(3)"></login-page>
+
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>

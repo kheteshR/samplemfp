@@ -1,0 +1,8 @@
+<h1 class="text-center">Details</h1>
+<hr/>
+<blockquote>
+	<h5>{{AppCtrl.currentFeed.title}}</h5>
+	<p ng-bind-html="AppCtrl.renderHtml()"></p>
+	<span class="muted">{{AppCtrl.currentFeed.pubDate}}</span>
+</blockquote>
+<a class="btn btn-block btn-large" ng-click="AppCtrl.changePage(1)">Back</a>

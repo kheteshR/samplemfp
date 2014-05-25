@@ -1,0 +1,8 @@
+<h1 class="text-center">Feeds</h1>
+<hr />
+<ul>
+	<li ng-repeat="feed in AppCtrl.feeds" ng-click="AppCtrl.onFeedItemClicked($index)">
+		<span class="muted">{{feed.pubDate}}</span>
+		<blockquote>{{feed.title}}</blockquote>
+	</li>
+</ul>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:loginConfiguration xmlns:tns="http://www.worklight.com/auth/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	 <securityTests>
+		<webSecurityTest name="AdapterSecurityTest">
+			<testUser realm="AdapterAuthRealm"/>
+		</webSecurityTest>
+	</securityTests> 
+	
+	<realms>
+		<realm name="AdapterAuthRealm" loginModule="NonValidatingLoginModule">
+			<className>com.worklight.integration.auth.AdapterAuthenticator</className>
+			<parameter name="login-function">NewsAdapter.onAuthRequired</parameter>
+			<parameter name="logout-function">NewsAdapter.onLogout</parameter>
+		</realm>
+	</realms>
+
+	<loginModules>
+		<loginModule name="NonValidatingLoginModule">
+			<className>com.worklight.core.auth.ext.NonValidatingLoginModule</className>
+		</loginModule>
+	</loginModules>
+
+</tns:loginConfiguration>
